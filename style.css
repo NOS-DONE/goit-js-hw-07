@@ -1,0 +1,7 @@
+#gallery > img {
+  max-height: 100px;
+  border-radius: 4px;
+}
+#gallery > img:not(:first-child) {
+  margin-left: 20px;
+}
