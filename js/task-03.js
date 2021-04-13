@@ -18,6 +18,11 @@ const images = [
 
   const galleryRef = document.querySelector('#gallery');
 
-  images.forEach(({url}) => {
-      galleryRef.insertAdjacentHTML('afterbegin', `<img src="${url}">`)
-    })
+  const imgElements = images.map(({url}) => {
+      const imageEL = document.createElement('img');
+      imageEL.setAttribute('src', `${url}`);
+      return imageEL;
+    });
+
+    galleryRef.append(...imgElements);
+

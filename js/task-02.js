@@ -16,4 +16,4 @@ const liElements = ingredients.map(li => {
   return liEl;
 });
 
-ulRef.append(...liElements)
+ulRef.append(...liElements);
