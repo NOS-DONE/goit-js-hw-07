@@ -18,11 +18,10 @@ const images = [
 
   const galleryRef = document.querySelector('#gallery');
 
-  const imgElements = images.map(({url}) => {
-      const imageEL = document.createElement('img');
-      imageEL.setAttribute('src', `${url}`);
-      return imageEL;
-    });
+  const imgElements = images.map(({url, alt}) => {
+      return `
+      <li><img src="${url}" alt="${alt}"></li>`;
+    }).join('');
 
-    galleryRef.append(...imgElements);
+    galleryRef.insertAdjacentHTML('beforeend', imgElements);
 

@@ -1,7 +1,15 @@
-#gallery > img {
+#gallery {
+  display: flex;
+}
+
+#gallery li {
+  list-style: none;
+}
+
+#gallery img {
   max-height: 100px;
   border-radius: 4px;
 }
-#gallery > img:not(:first-child) {
+#gallery > li:not(:first-child) {
   margin-left: 20px;
 }
